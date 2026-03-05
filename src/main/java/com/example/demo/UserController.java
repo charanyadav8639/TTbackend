@@ -18,6 +18,11 @@ public class UserController {
     @Autowired
     UserRepository userRepo;
 
+    @GetMapping("/")
+    public String home() {
+        return "TTproject API is running. Try /demo, /users, or POST /register";
+    }
+
     @GetMapping("/demo")
     public String demo(){
 
